@@ -1,0 +1,188 @@
+---
+title: "Fixed size and Fixed brand"
+author: "Geonwoo Ban"
+date: '2022-06-02'
+institute: Pusan National University \newline Department of Statistics
+output:
+  beamer_presentation:
+    theme: "Boadilla"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, echo=F}
+img_path <- "figures"
+```
+
+## Process
+
+1\) Fix size and brand (7, Adidas)
+
+2\) Aligning all images into one base image (KAZE descriptor)
+
+3\) Calculate norm of vectors(CP-decomposition, descriptors)
+
+4\) Classification(Optimal point, RandomForest)
+
+5\) Find significant point
+
+
+## Data
+
+__Original__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"oringin_data.png"))
+```
+
+
+
+## Data
+
+__Alignment__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"align_data.png"))
+```
+
+
+## Data
+
+* Total 2696 pairs
+
+* 1348 matching pairs vs 1348 non-matching pairs
+
+* Train : Test = 1897 : 899 (Random forest)
+
+* Train : Validation : Test = 898 : 899 : 899 (Optimal point method)
+
+
+## Data
+
+__Norm dataset__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"train.png"))
+```
+
+## Modeling
+
+__Random forest with descriptors__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_roc_1.png"))
+```
+
+
+## Modeling
+
+__Optimal point__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_step1.png"))
+```
+
+## Modeling
+
+__Optimal point__
+
+1\. $max(TPR-FPR)$ : Red color
+
+2\. $TPR+FPR \simeq 1$ : Green color
+
+
+
+## Modeling
+
+__Optimal point__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_step2.png"))
+```
+
+## Modeling
+
+__Optimal point__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_step3.png"))
+```
+
+
+## Modeling
+
+__Optimal point__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_step4.png"))
+```
+
+## Modeling
+
+__Optimal point__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_roc_2.png"))
+```
+
+
+## Modeling
+
+__Random forest with CP norm__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"fix_roc_3.png"))
+```
+
+
+## Significant point
+
+* Find the smallest value point in mean of CP-decomposed vector
+
+* Draw average image of aligning images
+
+* Add significant component x-axis and y-axis
+
+* Significant point = cross point of components
+
+
+## Significant point
+
+__Average image__
+
+```{r, echo=FALSE, fig.cap=""}
+knitr::include_graphics(file.path(img_path,"sig_point.png"))
+```
+
+
+## Summary
+
+__Change the alignment way__
+
+Original : align the same person, size and  brand images
+
+New way : align size and  brand images
+
+$\to$ Increase classification error
+
+
+__Find significant point__
+
+* Have to align as the new way to define baseline image
+
+* Just find the smallest value point
+  + Does not mean the difference to classify matching and non-matching
+  
+$\to$ Find a new way to figure out important point in classification
+
+
+
+
+
+
+

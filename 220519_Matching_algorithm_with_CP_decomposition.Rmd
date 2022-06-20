@@ -1,0 +1,179 @@
+---
+title: Matching algorithm \newline with CP-decomposition
+author: "Geonwoo Ban"
+date: '2022-05-19'
+institute: Pusan National University \newline Department of Statistics
+output:
+  beamer_presentation:
+    theme: "Boadilla"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, echo=F}
+img_path <- "figures"
+```
+
+## List
+
+1. Image matching
+  +Matching algorithm
+
+
+2. CP-decomposition
+  +Footprint image decomposition
+  +Restored footprint image
+
+
+3. Experiment
+  +Rank 1 CP-decomposition
+  +CP-decomposition matching algorithm
+  +Compare with descriptor method
+
+
+
+
+## A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
